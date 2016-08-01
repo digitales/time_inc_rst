@@ -47,6 +47,27 @@ class TimeIncRstCore{
 
 
 	/**
+	 * Check if a given URL is valid
+	 *
+	 * @param string $url the URL to load.
+	 *
+	 * @return boolean
+	 */
+	static function is_valid_url( $url ) {
+
+		$client = new Client();
+
+		try {
+			$client->head( $url );
+			return true;
+		} catch (GuzzleHttp\Exception\ClientException $e) {
+			return false;
+		}
+
+	}
+
+
+	/**
 	 * Get a given WordPress JSON URL
 	 *
 	 * @param string $url the URL to load.
@@ -54,6 +75,12 @@ class TimeIncRstCore{
 	 * @return array || false return the results or nothing.
 	 */
 	static function get_url( string $url ) {
+
+		$is_valid_url = self::is_valid_url( $url );
+
+		if ( ! $is_valid_url ) {
+			return false;
+		}
 
 		$client = new Client();
 
@@ -166,7 +193,7 @@ class TimeIncRstCore{
 
 		$rendered_view = $twig->render( $view.'.twig', $data_for_view );
 
-		if ( true === $render ) {
+		if ( true == $render ) {
 
 			echo $rendered_view;
 

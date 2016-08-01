@@ -42,7 +42,11 @@ class Timeinc_RST_Widget extends WP_Widget {
 
 		if ( get_transient( $transient_name ) && 1 === (int) $instance['cache_enable'] ) {
 			$rendered = get_transient( $transient_name );
-			return $rendered;
+			echo  $rendered;
+
+			echo '<!-- Cached version of content -->';
+
+			return true;
 		}
 
 		if ( isset( $instance['error'] ) && $instance['error'] ) {
@@ -79,7 +83,7 @@ class Timeinc_RST_Widget extends WP_Widget {
 			set_transient( $transient_name, $rendered,  $instance['cache_time'] );
 		}
 
-		return $rendered;
+		echo  $rendered;
 	}
 
 
