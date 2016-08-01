@@ -13,11 +13,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
  A plugin to fulfill the coding test for TIme Inc - create a widget to load results from a JSON API and display via a widget.
 
- The plugin uses Guzzle to handle the URL requests and uses transients for the caching. The reaason for this is
- so that the widget contents will be cached even if the caching is not enabled the site.
+ The plugin uses Guzzle to handle the URL requests and uses transients for the caching. The reaason for this is so that the widget contents will be cached even if the caching is not enabled the site.
 
-Please note that we are using composer for bringin in the twig dependancies, so composer will need to be run
-on the plugin directory.
+*Please note:* that we are using composer for bringin in the twig dependancies, so composer will need to be run on the plugin directory.
+
+*Please note:* The vendor directory is ignored from source control, so composer will need to be run to install the dependancies.
 
 == Todo ==
 * Implement the unit and functional testing of the pluginTime
