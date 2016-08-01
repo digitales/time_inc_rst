@@ -1,0 +1,11 @@
+
+{{ before_widget|raw }}
+
+{{ before_title|raw }}{{ title }}{{ after_title|raw }}
+
+<ul>
+{% for record in records %}
+       <lI>{{ include('post_simple.html.twig', { 'post': record }) }}</li>
+{% endfor %}
+</ul>
+{{ after_widget|raw }}
