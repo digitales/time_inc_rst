@@ -7,7 +7,7 @@ Stable tag: 0.1.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
- A plugin to fulfill the coding test for TIme Inc - create a widget to load results from a JSON API and display via a widget
+ A plugin to fulfill the coding test for Time Inc - create a widget to load results from a JSON API and display via a widget
 
 == Description ==
 
@@ -18,6 +18,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 Please note that we are using composer for bringin in the twig dependancies, so composer will need to be run
 on the plugin directory.
+
+== Todo ==
+* Implement the unit and functional testing of the pluginTime
 
 == Installation ==
 
@@ -33,3 +36,4 @@ on the plugin directory.
 
 = 1.0.0 =
 * The first version of the plugin
+

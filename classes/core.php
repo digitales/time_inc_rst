@@ -28,7 +28,7 @@ class TimeIncRstCore{
 
 
 	/**
-	 * Initialize the plugin
+	 * Initialize the plugin.
 	 */
 	function init() {
 		add_action( 'init', array( __CLASS__, 'add_widgets' ) );
@@ -53,7 +53,7 @@ class TimeIncRstCore{
 	 *
 	 * @return boolean
 	 */
-	static function is_valid_url( $url ) {
+	static function is_valid_url( string $url ) {
 
 		$client = new Client();
 
@@ -193,9 +193,11 @@ class TimeIncRstCore{
 
 		$rendered_view = $twig->render( $view.'.twig', $data_for_view );
 
-		if ( true == $render ) {
+		if ( true === $render ) {
 
 			echo $rendered_view;
+
+			return '';
 
 		} else {
 

@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name:     Time inc coding test
- * Plugin URI:      github.com/digitales/timeinc_rst
+ * Plugin URI:      https://github.com/digitales/time_inc_rst
  * Description:     A plugin to fulfill the coding test for TIme Inc - create a widget to load results from a JSON API and display via a widget
  * Author:          Ross Tweedie
  * Author URI:      https://github.com/digitales
